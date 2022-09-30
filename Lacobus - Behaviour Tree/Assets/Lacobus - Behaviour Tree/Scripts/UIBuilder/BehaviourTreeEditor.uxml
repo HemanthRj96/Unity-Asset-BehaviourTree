@@ -1,0 +1,24 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/Lacobus%20-%20Behaviour%20Tree/Scripts/UIBuilder/BehaviourTreeEditor.uss?fileID=7433441132597879392&amp;guid=084a9160002040046a540d04df886491&amp;type=3#BehaviourTreeEditor" />
+    <uie:Toolbar>
+        <uie:ToolbarMenu display-tooltip-when-elided="true" text="Assets" />
+    </uie:Toolbar>
+    <Lacobus.BehaviourTreeEditor.SplitView fixed-pane-initial-dimension="250">
+        <ui:VisualElement name="left-panel">
+            <Lacobus.BehaviourTreeEditor.SplitView orientation="Vertical" fixed-pane-initial-dimension="250">
+                <ui:VisualElement name="inspector-container">
+                    <ui:Label text="Inspector" display-tooltip-when-elided="true" style="background-color: rgb(40, 40, 40);" />
+                    <Lacobus.BehaviourTreeEditor.InspectorView style="flex-grow: 0;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="blackboard-container">
+                    <ui:Label text="Blackboard" display-tooltip-when-elided="true" enable-rich-text="false" style="background-color: rgba(40, 40, 40, 255);" />
+                    <ui:IMGUIContainer name="blackboard-view" />
+                </ui:VisualElement>
+            </Lacobus.BehaviourTreeEditor.SplitView>
+        </ui:VisualElement>
+        <ui:VisualElement name="right-panel">
+            <ui:Label text="Graph View" display-tooltip-when-elided="true" style="background-color: rgb(40, 40, 40);" />
+            <Lacobus.BehaviourTreeEditor.BehaviourTreeGraphView focusable="true" style="flex-grow: 1;" />
+        </ui:VisualElement>
+    </Lacobus.BehaviourTreeEditor.SplitView>
+</ui:UXML>
